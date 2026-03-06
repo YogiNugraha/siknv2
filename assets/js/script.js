@@ -142,23 +142,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  // ── Gallery Marquee Swiper (auto-scroll infinite) ────────────────────────
-  if (typeof Swiper !== "undefined") {
-    const galleryEl = document.querySelector(".gallery-marquee__slider");
-    if (galleryEl) {
-      new Swiper(".gallery-marquee__slider", {
-        slidesPerView: "auto",
-        spaceBetween: 40,
-        loop: true,
-        speed: 5000,
-        freeMode: true,
-        autoplay: {
-          delay: 0,
-          disableOnInteraction: false,
-        },
-      });
-    }
-  }
 
   // ── Info Terkini Swiper ──────────────────────────────────────────────────
   if (typeof Swiper !== "undefined") {

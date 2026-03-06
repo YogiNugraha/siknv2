@@ -47,11 +47,11 @@ p {
 
 /* Links (Anchor) Reset */
 a {
-  color: var(--sky-500); /* Warna utama link */
+  color: var(--sky-500);
   text-decoration: none;
   transition: color var(--transition-fast);
 }
 
 a:hover {
-  color: var(--sky-600); /* Warna link saat dihover */
+  color: var(--sky-600);
 }

@@ -468,14 +468,32 @@
 .gallery-marquee {
   padding: 96px 0;
   overflow: hidden;
+  width: 100%;
 }
 
-.gallery-marquee .swiper {
-  overflow: visible;
+.gallery-marquee__track {
+  display: flex;
+  width: max-content;
+  animation: marquee-scroll 40s linear infinite;
 }
 
-.gallery-marquee .swiper-slide {
-  width: auto;
+.gallery-marquee__track:hover {
+  animation-play-state: paused;
+}
+
+.gallery-marquee__content {
+  display: flex;
+  gap: 40px;
+  padding-right: 40px; /* same as gap, ensures smooth seam */
+}
+
+@keyframes marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
 }
 
 .gallery-marquee__img {
