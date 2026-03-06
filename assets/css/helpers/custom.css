@@ -1,0 +1,57 @@
+/* 
+==========================================================================
+   CUSTOM STYLES & OVERRIDES
+========================================================================== 
+*/
+
+/* Force Bootstrap container to 1200px on large screens */
+@media (min-width: 1200px) {
+  .container,
+  .container-lg,
+  .container-md,
+  .container-sm,
+  .container-xl,
+  .container-xxl {
+    max-width: 1200px !important;
+  }
+}
+
+/* Global Typography Default */
+body {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: var(--bs-body-color);
+  background-color: var(--bs-body-bg);
+}
+
+/* Headings Reset */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: var(--bs-heading-color);
+  font-family: var(--bs-font-sans-serif);
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+/* Paragraph Reset */
+p {
+  margin-top: 0;
+  margin-bottom: var(--space-4);
+}
+
+/* Links (Anchor) Reset */
+a {
+  color: var(--sky-500); /* Warna utama link */
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+a:hover {
+  color: var(--sky-600); /* Warna link saat dihover */
+}

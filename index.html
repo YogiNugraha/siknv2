@@ -1,0 +1,736 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      name="description"
+      content="SIKN - Sistem Informasi Kurikulum Nasional"
+    />
+    <meta
+      name="keywords"
+      content="SIKN, kurikulum nasional, pendidikan, kemdikbud"
+    />
+    <title>SIKN - Sistem Informasi Kurikulum Nasional</title>
+    <!-- Favicon -->
+    <link href="assets/images/favicon.png" rel="shortcut icon" />
+
+    <!-- CSS -->
+    <link
+      href="assets/plugins/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link href="assets/css/theme.css" rel="stylesheet" />
+    <!-- Plugins -->
+    <link rel="stylesheet" href="assets/plugins/swiper/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="assets/plugins/aos/aos.css" />
+    <!-- Icons (lucide - loaded early so icons render on paint) -->
+    <script src="assets/plugins/lucide/lucide.min.js"></script>
+  </head>
+  <body>
+    <!-- ==================== HEADER / NAVBAR ==================== -->
+    <header class="header">
+      <!-- ── Top Bar: Logos & Badges ── -->
+      <div class="header-top">
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <a href="index.html" class="header-top__brand">
+            <img
+              src="assets/images/logo-kemdikbud.png"
+              alt="Logo Kemdikbud"
+              class="logo-kemdikbud"
+            />
+            <span class="header-top__divider"></span>
+            <img
+              src="assets/images/logo-sikn.png"
+              alt="SIKN - Sistem Informasi Kurikulum Nasional"
+              class="logo-sikn"
+            />
+          </a>
+          <div class="header-top__badges">
+            <img
+              src="assets/images/badge-pendidikan-bermutu.png"
+              alt="Pendidikan Bermutu Untuk Semua"
+            />
+            <img src="assets/images/badge-ramah.png" alt="Ramah" />
+          </div>
+        </div>
+      </div>
+
+      <!-- ── Bottom Bar: Navigation + Search ── -->
+      <div class="header-bottom">
+        <div
+          class="container d-flex align-items-center justify-content-between"
+        >
+          <!-- Mobile hamburger -->
+          <button
+            class="header-mobile-toggle"
+            id="mobileMenuToggle"
+            type="button"
+            aria-label="Toggle navigation"
+            aria-expanded="false"
+          >
+            <i data-lucide="menu"></i>
+          </button>
+
+          <!-- Nav links -->
+          <ul class="header-nav" role="menubar">
+            <li class="header-nav__item header-nav__item--active">
+              <a href="index.html" class="header-nav__link" role="menuitem"
+                >Beranda</a
+              >
+            </li>
+
+            <li class="header-nav__item header-nav__item--dropdown">
+              <a
+                href="#"
+                class="header-nav__link header-nav__link--dropdown"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Kurikulum
+                <i data-lucide="chevron-down" class="chevron-icon"></i>
+              </a>
+              <div class="header-dropdown" role="menu">
+                <a href="#" class="header-dropdown__link" role="menuitem"
+                  >Kurikulum Merdeka</a
+                >
+                <a href="#" class="header-dropdown__link" role="menuitem"
+                  >Kurikulum 2013</a
+                >
+                <a href="#" class="header-dropdown__link" role="menuitem"
+                  >Kurikulum KTSP</a
+                >
+              </div>
+            </li>
+
+            <li
+              class="header-nav__item header-nav__item--dropdown header-nav__item--mega"
+            >
+              <a
+                href="#"
+                class="header-nav__link header-nav__link--dropdown"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Perangkat Pembelajaran
+                <i data-lucide="chevron-down" class="chevron-icon"></i>
+              </a>
+              <div class="header-dropdown header-dropdown--mega" role="menu">
+                <div class="mega-menu">
+                  <!-- Left side: standard links -->
+                  <div class="mega-menu__left">
+                    <a href="#" class="header-dropdown__link" role="menuitem"
+                      >Perencanaan Pembelajaran</a
+                    >
+                    <a href="#" class="header-dropdown__link" role="menuitem"
+                      >Praktik Baik Kurikulum Satuan Pendidikan</a
+                    >
+                    <a href="#" class="header-dropdown__link" role="menuitem"
+                      >Video Praktik Baik</a
+                    >
+                  </div>
+                  <!-- Right side: feature cards -->
+                  <div class="mega-menu__right">
+                    <a href="#" class="feature-card">
+                      <div class="feature-card__img">
+                        <img
+                          src="assets/images/logo-bahan-ajar.png"
+                          alt="Buku"
+                        />
+                      </div>
+                      <div class="feature-card__content">
+                        <span class="feature-card__title">Buku</span>
+                        <span class="feature-card__desc"
+                          >Lorem ipsum dolor sit amet consectetur. Neque sit
+                          suspendisse faucibus netus.</span
+                        >
+                      </div>
+                      <div class="feature-card__arrow">
+                        <i
+                          data-lucide="arrow-up-right"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </div>
+                    </a>
+
+                    <a href="#" class="feature-card">
+                      <div class="feature-card__img">
+                        <img src="assets/images/logo-buku.png" alt="Buku" />
+                      </div>
+                      <div class="feature-card__content">
+                        <span class="feature-card__title">Bahan Ajar</span>
+                        <span class="feature-card__desc"
+                          >Lorem ipsum dolor sit amet consectetur. Neque sit
+                          suspendisse faucibus netus.</span
+                        >
+                      </div>
+                      <div class="feature-card__arrow">
+                        <i
+                          data-lucide="arrow-up-right"
+                          style="width: 16px; height: 16px"
+                        ></i>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li class="header-nav__item header-nav__item--dropdown">
+              <a
+                href="#"
+                class="header-nav__link header-nav__link--dropdown"
+                role="menuitem"
+                aria-haspopup="true"
+                aria-expanded="false"
+              >
+                Unduhan
+                <i data-lucide="chevron-down" class="chevron-icon"></i>
+              </a>
+              <div class="header-dropdown" role="menu">
+                <a href="#" class="header-dropdown__link" role="menuitem"
+                  >Dokumen</a
+                >
+                <a href="#" class="header-dropdown__link" role="menuitem"
+                  >Media Pembelajaran</a
+                >
+              </div>
+            </li>
+
+            <li class="header-nav__item">
+              <a href="#" class="header-nav__link" role="menuitem">Publikasi</a>
+            </li>
+          </ul>
+
+          <!-- Search -->
+          <div class="header-search">
+            <i data-lucide="search" class="header-search__icon"></i>
+            <input
+              type="search"
+              class="header-search__input"
+              placeholder="Cari informasi di sini"
+              aria-label="Cari informasi"
+            />
+          </div>
+        </div>
+      </div>
+      <div class="header-overlay" id="headerOverlay"></div>
+    </header>
+    <!-- ==================== END HEADER ==================== -->
+
+    <main>
+      <!-- ==================== HERO SECTION ==================== -->
+      <section class="hero">
+        <!-- Background layer with hero-background.jpg -->
+        <div class="hero__bg">
+          <div class="container">
+            <div class="hero__inner">
+              <!-- Left: Text Content -->
+              <div class="hero__content" data-aos="fade-right">
+                <h1 class="display-6-medium">
+                  Selamat Datang di Sistem Informasi Kurikulum Nasional
+                </h1>
+                <p class="subtitle-2-regular">
+                  Pusat informasi resmi Kurikulum Nasional untuk guru, kepala
+                  sekolah, dan pengelola satuan pendidikan.
+                </p>
+              </div>
+            </div>
+          </div>
+          <!-- Right: Hero Image (full bleed to right edge) -->
+          <div class="hero__image">
+            <img
+              src="assets/images/hero-right.png"
+              alt="Guru dan siswa belajar bersama"
+            />
+          </div>
+        </div>
+
+        <!-- Quick Links Card (overlapping bottom) -->
+        <div class="container hero__quick-links" data-aos="fade-up">
+          <div class="quick-links">
+            <div class="quick-links__header">
+              <span class="quick-links__title body-large-medium"
+                >Apa yang ingin Anda temukan?</span
+              >
+              <div class="quick-links__nav">
+                <button
+                  class="quick-links__nav-btn"
+                  id="quickLinkPrev"
+                  aria-label="Previous"
+                >
+                  <i
+                    data-lucide="chevron-left"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                </button>
+                <button
+                  class="quick-links__nav-btn"
+                  id="quickLinkNext"
+                  aria-label="Next"
+                >
+                  <i
+                    data-lucide="chevron-right"
+                    style="width: 18px; height: 18px"
+                  ></i>
+                </button>
+              </div>
+            </div>
+            <div class="swiper quick-links__slider">
+              <div class="swiper-wrapper">
+                <!-- Card 1 -->
+                <div class="swiper-slide">
+                  <a href="#" class="quick-link-card">
+                    <div class="quick-link-card__icon">
+                      <i data-lucide="layout-grid"></i>
+                    </div>
+                    <span class="quick-link-card__text"
+                      >Saya ingin melihat Struktur Kurikulum</span
+                    >
+                    <div class="quick-link-card__arrow">
+                      <i data-lucide="arrow-up-right"></i>
+                    </div>
+                  </a>
+                </div>
+                <!-- Card 2 -->
+                <div class="swiper-slide">
+                  <a href="#" class="quick-link-card">
+                    <div class="quick-link-card__icon">
+                      <i data-lucide="target"></i>
+                    </div>
+                    <span class="quick-link-card__text"
+                      >Saya mencari Capaian Pembelajaran (CP)</span
+                    >
+                    <div class="quick-link-card__arrow">
+                      <i data-lucide="arrow-up-right"></i>
+                    </div>
+                  </a>
+                </div>
+                <!-- Card 3 -->
+                <div class="swiper-slide">
+                  <a href="#" class="quick-link-card">
+                    <div class="quick-link-card__icon">
+                      <i data-lucide="file-text"></i>
+                    </div>
+                    <span class="quick-link-card__text"
+                      >Saya butuh Contoh Perencanaan Pembelajaran</span
+                    >
+                    <div class="quick-link-card__arrow">
+                      <i data-lucide="arrow-up-right"></i>
+                    </div>
+                  </a>
+                </div>
+                <!-- Card 4 -->
+                <div class="swiper-slide">
+                  <a href="#" class="quick-link-card">
+                    <div class="quick-link-card__icon">
+                      <i data-lucide="book-open"></i>
+                    </div>
+                    <span class="quick-link-card__text"
+                      >Saya ingin mencari Buku / Bahan Ajar</span
+                    >
+                    <div class="quick-link-card__arrow">
+                      <i data-lucide="arrow-up-right"></i>
+                    </div>
+                  </a>
+                </div>
+                <!-- Card 5 -->
+                <div class="swiper-slide">
+                  <a href="#" class="quick-link-card">
+                    <div class="quick-link-card__icon">
+                      <i data-lucide="video"></i>
+                    </div>
+                    <span class="quick-link-card__text"
+                      >Saya ingin melihat Video Praktik Baik</span
+                    >
+                    <div class="quick-link-card__arrow">
+                      <i data-lucide="arrow-up-right"></i>
+                    </div>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== END HERO ==================== -->
+
+      <!-- ==================== ABOUT SECTION ==================== -->
+      <section class="about">
+        <div class="container">
+          <div class="about__card" data-aos="fade-up">
+            <!-- Left: Text -->
+            <div class="about__content">
+              <h2 class="about__title title-4-medium">
+                Tentang Sistem Informasi Kurikulum Nasional
+              </h2>
+              <p class="about__desc body-large-regular">
+                Temukan struktur kurikulum, capaian pembelajaran, panduan
+                implementasi, dan regulasi terbaru dalam satu platform.
+              </p>
+              <div class="about__actions">
+                <a href="#" class="btn-about btn-about--outline">
+                  <i data-lucide="play-circle" class="btn-about__icon"></i>
+                  Video Cara Penggunaan
+                </a>
+                <a href="#" class="btn-about btn-about--filled">
+                  Selengkapnya
+                </a>
+              </div>
+            </div>
+            <!-- Right: Image -->
+            <div class="about__image">
+              <img
+                src="assets/images/about.jpg"
+                alt="Tim guru berdiskusi menggunakan laptop"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== END ABOUT ==================== -->
+
+      <!-- ==================== STRUKTUR KURIKULUM ==================== -->
+      <section class="struktur">
+        <div class="container">
+          <!-- Header -->
+          <div class="struktur__header">
+            <h2 class="struktur__title display-7-bold">Struktur Kurikulum</h2>
+            <a href="#" class="btn-selengkapnya">Selengkapnya</a>
+          </div>
+          <!-- Body: 2 columns -->
+          <div class="struktur__body">
+            <!-- Left: Curriculum Items -->
+            <div class="struktur__list">
+              <!-- Item 1 -->
+              <div class="curriculum-item" data-aos="fade-up">
+                <div class="curriculum-item__header">
+                  <div class="curriculum-item__icon">
+                    <i data-lucide="book-marked"></i>
+                  </div>
+                  <span class="curriculum-item__name">Intrakurikuler</span>
+                  <a href="#" class="curriculum-item__arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                  </a>
+                </div>
+                <p class="curriculum-item__desc">
+                  Mengintegrasikan ke dalam capaian pembelajaran mata pelajaran
+                  yang relevan, dan/atau menyusun contoh perencanaan
+                  pembelajaran mata pelajaran yang dapat dikontekskan dengan isu
+                  prioritas.
+                </p>
+              </div>
+
+              <!-- Item 2 -->
+              <div
+                class="curriculum-item"
+                data-aos="fade-up"
+                data-aos-delay="100"
+              >
+                <div class="curriculum-item__header">
+                  <div class="curriculum-item__icon">
+                    <i data-lucide="users"></i>
+                  </div>
+                  <span class="curriculum-item__name">Kokurikuler</span>
+                  <a href="#" class="curriculum-item__arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                  </a>
+                </div>
+                <p class="curriculum-item__desc">
+                  Mengintegrasikan dengan tema/topik projek penguatan profil
+                  pelajar Pancasila yang relevan.
+                </p>
+              </div>
+
+              <!-- Item 3 -->
+              <div
+                class="curriculum-item"
+                data-aos="fade-up"
+                data-aos-delay="200"
+              >
+                <div class="curriculum-item__header">
+                  <div class="curriculum-item__icon">
+                    <i data-lucide="trophy"></i>
+                  </div>
+                  <span class="curriculum-item__name">Ekstrakurikuler</span>
+                  <a href="#" class="curriculum-item__arrow">
+                    <i data-lucide="arrow-up-right"></i>
+                  </a>
+                </div>
+                <p class="curriculum-item__desc">
+                  Mengintegrasikan isu prioritas dalam aktivitas
+                  ekstrakurikuler.
+                </p>
+              </div>
+            </div>
+
+            <!-- Right: Image -->
+            <div class="struktur__image" data-aos="fade-left">
+              <img
+                src="assets/images/struktur.jpg"
+                alt="Siswa belajar di kelas"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== END STRUKTUR KURIKULUM ==================== -->
+
+      <!-- ==================== GALLERY MARQUEE ==================== -->
+      <section class="gallery-marquee">
+        <div class="swiper gallery-marquee__slider">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <img
+                class="gallery-marquee__img"
+                src="assets/images/gallery-1.jpg"
+                alt="Aktivitas siswa di kelas"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="gallery-marquee__img"
+                src="assets/images/gallery-2.jpg"
+                alt="Guru mengajar dengan globus"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="gallery-marquee__img"
+                src="assets/images/gallery-3.jpg"
+                alt="Siswa bermain di halaman sekolah"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="gallery-marquee__img"
+                src="assets/images/gallery-4.jpg"
+                alt="Kegiatan belajar kreatif"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="gallery-marquee__img"
+                src="assets/images/gallery-5.jpg"
+                alt="Pembelajaran outdoor"
+              />
+            </div>
+            <div class="swiper-slide">
+              <img
+                class="gallery-marquee__img"
+                src="assets/images/gallery-6.jpg"
+                alt="Diskusi kelompok siswa"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== END GALLERY MARQUEE ==================== -->
+
+      <!-- ==================== INFO TERKINI ==================== -->
+      <section class="info-terkini">
+        <div class="container">
+          <!-- Header -->
+          <div class="info-terkini__header">
+            <h2 class="info-terkini__title display-7-bold">Info Terkini</h2>
+            <a href="#" class="btn-selengkapnya">Lihat Semua</a>
+          </div>
+
+          <!-- Swiper Slider -->
+          <div class="swiper info-terkini__slider">
+            <div class="swiper-wrapper">
+              <!-- Card 1 -->
+              <div class="swiper-slide">
+                <a href="#" class="news-card">
+                  <div class="news-card__image">
+                    <img
+                      src="assets/images/news-1.jpg"
+                      alt="Panduan Pemilihan Mapel Pilihan SMA"
+                    />
+                    <span class="news-card__badge">Terbaru</span>
+                  </div>
+                  <div class="news-card__content">
+                    <span class="news-card__tag">Publikasi</span>
+                    <p class="news-card__desc">
+                      Lorem ipsum dolor sit amet consectetur. Imperdiet
+                      adipiscing lacus orci posuere quam feugiat Habitasse
+                      aliquet arcu accumsan od...
+                    </p>
+                    <span class="news-card__date">7 Januari 2026</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 2 -->
+              <div class="swiper-slide">
+                <a href="#" class="news-card">
+                  <div class="news-card__image">
+                    <img
+                      src="assets/images/news-2.jpg"
+                      alt="Praktik Baik Pembelajaran"
+                    />
+                    <span class="news-card__badge">Terbaru</span>
+                  </div>
+                  <div class="news-card__content">
+                    <span class="news-card__tag">Praktik Baik</span>
+                    <p class="news-card__desc">
+                      Lorem ipsum dolor sit amet consectetur. Imperdiet
+                      adipiscing lacus orci posuere quam feugiat Habitasse
+                      aliquet arcu accumsan od...
+                    </p>
+                    <span class="news-card__date">7 Januari 2026</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 3 -->
+              <div class="swiper-slide">
+                <a href="#" class="news-card">
+                  <div class="news-card__image">
+                    <img
+                      src="assets/images/news-3.jpg"
+                      alt="Implementasi Kurikulum Merdeka"
+                    />
+                    <span class="news-card__badge">Terbaru</span>
+                  </div>
+                  <div class="news-card__content">
+                    <span class="news-card__tag">Regulasi</span>
+                    <p class="news-card__desc">
+                      Lorem ipsum dolor sit amet consectetur. Imperdiet
+                      adipiscing lacus orci posuere quam feugiat Habitasse
+                      aliquet arcu accumsan od...
+                    </p>
+                    <span class="news-card__date">5 Januari 2026</span>
+                  </div>
+                </a>
+              </div>
+
+              <!-- Card 4 -->
+              <div class="swiper-slide">
+                <a href="#" class="news-card">
+                  <div class="news-card__image">
+                    <img
+                      src="assets/images/news-4.jpg"
+                      alt="Panduan Bahan Ajar"
+                    />
+                  </div>
+                  <div class="news-card__content">
+                    <span class="news-card__tag">Bahan Ajar</span>
+                    <p class="news-card__desc">
+                      Lorem ipsum dolor sit amet consectetur. Imperdiet
+                      adipiscing lacus orci posuere quam feugiat Habitasse
+                      aliquet arcu accumsan od...
+                    </p>
+                    <span class="news-card__date">3 Januari 2026</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Footer: Nav + Scrollbar -->
+          <div class="info-terkini__footer">
+            <div class="info-terkini__nav">
+              <button
+                class="info-terkini__nav-btn"
+                id="infoTerkiniPrev"
+                aria-label="Previous"
+              >
+                <i data-lucide="arrow-left"></i>
+              </button>
+              <button
+                class="info-terkini__nav-btn"
+                id="infoTerkiniNext"
+                aria-label="Next"
+              >
+                <i data-lucide="arrow-right"></i>
+              </button>
+            </div>
+            <div
+              class="info-terkini__scrollbar"
+              id="infoTerkiniScrollbar"
+            ></div>
+          </div>
+        </div>
+      </section>
+      <!-- ==================== END INFO TERKINI ==================== -->
+    </main>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+      <div class="container">
+        <!-- Footer Body -->
+        <div class="footer__body">
+          <!-- Logo -->
+          <div class="footer__logo">
+            <img
+              src="assets/images/logo-kemendikdasmen.png"
+              alt="Logo Kemendikdasmen"
+            />
+            <!-- <span class="footer__logo-text">Kemen<span>dikdasmen</span></span> -->
+          </div>
+
+          <!-- Ministry Info + Contact -->
+          <div>
+            <p class="footer__ministry body-large-bold">
+              Kementerian Pendidikan Dasar dan menengah
+            </p>
+          </div>
+          <div class="footer__contact">
+            <div class="footer__contact-item">
+              <i data-lucide="map-pin"></i>
+              <span
+                >Kompleks Kemendikdasmen, Senayan, Jakarta Pusat, 10270</span
+              >
+            </div>
+            <div class="footer__contact-item">
+              <i data-lucide="clock"></i>
+              <span>Senin - Jumat, Pukul 08.00 - 16.00</span>
+            </div>
+            <div class="footer__contact-item">
+              <i data-lucide="mail"></i>
+              <span>kurikulum@kemendikdasmen.go.id</span>
+            </div>
+          </div>
+
+          <!-- Badges -->
+          <div class="footer__badges">
+            <img
+              src="assets/images/logo-tagar-white.png"
+              alt="Pendidikan Bermutu Untuk Semua"
+            />
+            <img src="assets/images/logo-ramah-white.png" alt="RAMAH" />
+          </div>
+        </div>
+
+        <!-- Bottom Bar -->
+        <div class="footer__bottom">
+          <p class="footer__copyright">
+            &copy; 2026 · Hak Cipta Kementrian Pendidikan Dasar dan Menengah ·
+            Badan Standar, Kurikulum, dan Asesmen Pendidikan · Pusat Kurikulum
+            dan Pembelajaran
+          </p>
+        </div>
+      </div>
+    </footer>
+    <!-- ==================== END FOOTER ==================== -->
+
+    <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
+      <i data-lucide="arrow-up"></i>
+    </button>
+
+    <!-- ***** JAVASCRIPTS ***** -->
+    <script src="assets/plugins/jquery/jquery.min.js"></script>
+    <script src="assets/plugins/swiper/swiper-bundle.min.js"></script>
+    <script src="assets/plugins/aos/aos.js"></script>
+    <script src="assets/plugins/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

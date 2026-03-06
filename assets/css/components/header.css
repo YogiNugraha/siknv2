@@ -1,0 +1,728 @@
+/* 
+==========================================================================
+   HEADER / NAVBAR
+========================================================================== 
+*/
+
+/* ── Main Header Wrapper ─────────────────────────────────────────────── */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: var(--z-header);
+  background-color: var(--header-bg);
+  /* Remove backdrop-filter from here to avoid containing block bugs on absolute children */
+  transition: background-color var(--transition-normal),
+    box-shadow var(--transition-normal);
+}
+
+/* Background element for Glassmorphism */
+.header::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-color: transparent;
+  transition: backdrop-filter var(--transition-normal),
+    -webkit-backdrop-filter var(--transition-normal);
+}
+
+/* ── Scroll State (Shrink + Glassmorphism) ──────────────────────────── */
+.header--scrolled {
+  background-color: rgba(255, 255, 255, 0.85);
+  /* box-shadow: var(--shadow-sm); */
+}
+
+.header--scrolled::before {
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+}
+
+/* ── Top Bar (Logos) ─────────────────────────────────────────────────── */
+.header-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-4) 0;
+  transition: padding var(--transition-normal);
+}
+
+.header--scrolled .header-top {
+  padding: var(--space-2) 0;
+}
+
+/* Brand cluster: Kemdikbud logo + SIKN logo */
+.header-top__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  text-decoration: none;
+}
+
+.header-top__brand img.logo-kemdikbud {
+  height: 48px;
+  width: auto;
+  transition: height var(--transition-normal);
+}
+
+.header--scrolled .header-top__brand img.logo-kemdikbud {
+  height: 36px;
+}
+
+/* Vertical Divider for Logos */
+.header-top__divider {
+  width: 1px;
+  height: 40px;
+  background-color: var(--slate-300);
+  transition: height var(--transition-normal);
+}
+
+.header--scrolled .header-top__divider {
+  height: 30px;
+}
+
+.header-top__brand img.logo-sikn {
+  height: 36px;
+  width: auto;
+  transition: height var(--transition-normal);
+}
+
+.header--scrolled .header-top__brand img.logo-sikn {
+  height: 28px;
+}
+
+/* Right-side badges */
+.header-top__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.header-top__badges img {
+  height: 32px;
+  width: auto;
+  transition: height var(--transition-normal);
+}
+
+.header--scrolled .header-top__badges img {
+  height: 24px;
+}
+
+/* ── Navigation Bar ──────────────────────────────────────────────────── */
+.header-bottom {
+  position: relative; /* Anchor for mega menu */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 var(--space-3) 0;
+  border-bottom: 1px solid var(--slate-300);
+}
+
+/* Nav list */
+.header-nav {
+  display: flex;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: var(--space-1);
+}
+
+/* Nav item */
+.header-nav__item {
+  position: relative;
+}
+
+/* Nav item holding a mega menu */
+.header-nav__item.header-nav__item--mega {
+  position: static !important;
+}
+
+/* Nav link */
+.header-nav__link {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  padding: var(--space-3) var(--space-3);
+  color: var(--slate-700);
+  text-decoration: none;
+  position: relative;
+  transition: color var(--transition-fast);
+  white-space: nowrap;
+}
+
+.header-nav__link:hover {
+  color: var(--sky-500);
+}
+
+/* Active state */
+.header-nav__item--active > .header-nav__link {
+  color: var(--slate-900);
+  font-weight: 500;
+}
+
+.header-nav__item--active > .header-nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: calc(-1 * var(--space-3) - 1px);
+  left: var(--space-3);
+  right: var(--space-3);
+  height: 6px;
+  background-color: var(--nav-active-indicator);
+  border-radius: 3px 3px 0 0;
+}
+
+/* Dropdown chevron icon */
+.header-nav__link .chevron-icon {
+  width: 16px;
+  height: 16px;
+  transition: transform var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.header-nav__item--dropdown.is-open .chevron-icon {
+  transform: rotate(180deg);
+}
+
+/* ── Dropdown Panel ──────────────────────────────────────────────────── */
+.header-dropdown {
+  position: absolute;
+  top: calc(100% + 13px);
+  left: 0;
+  min-width: 253px;
+  background-color: var(--white);
+  border: 1px solid var(--header-border);
+  border-radius: 0 0 var(--radius-xl) var(--radius-xl);
+  box-shadow: var(--shadow-md);
+  padding: var(--space-4) var(--space-2);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity var(--transition-fast), transform var(--transition-fast),
+    visibility var(--transition-fast);
+  z-index: var(--z-dropdown);
+}
+
+/* Invisible bridge to prevent hover from breaking */
+.header-dropdown::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0;
+  right: 0;
+  height: 20px;
+  background: transparent;
+}
+
+/* Mega Menu Modifier */
+.header-dropdown--mega {
+  width: 850px;
+  left: 50%;
+  top: calc(100% + 1px);
+  transform: translate(-50%, 8px);
+  padding: 0;
+  flex-direction: row;
+  gap: 0;
+}
+
+/* Show dropdown on hover (desktop) */
+.header-nav__item--dropdown:hover > .header-dropdown,
+.header-nav__item--dropdown.is-open > .header-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.header-nav__item--dropdown:hover > .header-dropdown--mega,
+.header-nav__item--dropdown.is-open > .header-dropdown--mega {
+  transform: translate(-50%, 0);
+}
+
+/* Dropdown link */
+.header-dropdown__link {
+  display: block;
+  padding: var(--space-2) var(--space-4);
+  color: var(--slate-700);
+  text-decoration: none;
+  border-radius: var(--radius-md);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.header-dropdown__link:hover {
+  background-color: var(--sky-50); /* Warna background card saat hover */
+  color: var(--slate-800); /* Warna teks saat hover */
+}
+
+/* ── Mega Menu Layout ────────────────────────────────────────────────── */
+.mega-menu {
+  display: flex;
+  align-items: stretch;
+}
+
+.mega-menu__left {
+  position: relative;
+  flex: 0 0 45%;
+  padding: var(--space-4) var(--space-2);
+  background-color: var(--white);
+  border-radius: var(--radius-xl) 0 0 var(--radius-xl);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+/* Pseudo-element for custom height border */
+.mega-menu__left::after {
+  content: "";
+  position: absolute;
+  top: var(--space-4);
+  bottom: var(--space-4);
+  right: 0;
+  width: 0.5px;
+  background-color: var(--slate-300);
+}
+
+.mega-menu__right {
+  flex: 0 0 55%;
+  padding: var(--space-6);
+  background-color: var(--white);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+  border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+}
+
+/* Feature Card */
+.feature-card {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--white);
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.feature-card:hover {
+  border-color: var(--sky-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  background-color: var(--sky-50);
+  color: var(--sky-500);
+  border-radius: var(--radius-md);
+}
+
+.feature-card__img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+}
+
+.feature-card__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Memastikan gambar memenuhi kotak tanpa merusak rasio */
+}
+
+.feature-card__content {
+  flex: 1;
+  min-width: 0; /* Prevents long unbreakable text from overflowing flex container */
+}
+
+.feature-card__title {
+  display: block;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--slate-800);
+  margin-bottom: var(--space-1);
+}
+
+.feature-card__desc {
+  display: block;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 12px;
+  color: var(--slate-500);
+  line-height: 1.2;
+  word-wrap: break-word; /* Prevents overflow */
+}
+
+.feature-card__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--sky-300);
+  border-radius: var(--radius-full);
+  color: var(--sky-500);
+  transition: background-color var(--transition-fast),
+    color var(--transition-fast);
+}
+
+.feature-card:hover .feature-card__arrow {
+  background-color: var(--sky-500);
+  color: var(--white);
+  border-color: var(--sky-500);
+}
+
+/* ── Search Bar ──────────────────────────────────────────────────────── */
+.header-search {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.header-search__input {
+  width: 480px;
+  padding: var(--space-2) var(--space-4) var(--space-2) var(--space-10);
+  color: var(--slate-700);
+  background-color: var(--white);
+  border: 1px solid var(--slate-300);
+  border-radius: var(--search-radius);
+  outline: none;
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.header-search__input::placeholder {
+  color: var(--slate-400);
+}
+
+.header-search__input:focus {
+  border-color: var(--sky-400);
+  box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.12);
+}
+
+.header-search__icon {
+  position: absolute;
+  left: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  width: 18px;
+  height: 18px;
+  color: var(--slate-400);
+  pointer-events: none;
+}
+
+/* Hide mobile search clone on desktop */
+.header-search--mobile {
+  display: none;
+}
+
+/* ── Mobile Toggle (Hamburger) ───────────────────────────────────────── */
+.header-mobile-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background: none;
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  color: var(--slate-700);
+  transition: background-color var(--transition-fast);
+}
+
+.header-mobile-toggle:hover {
+  background-color: var(--slate-50);
+}
+
+.header-mobile-toggle svg {
+  width: 22px;
+  height: 22px;
+}
+
+/* =========================================================================
+   RESPONSIVE
+========================================================================= */
+
+/* ── Overlay Backdrop (Mobile) ──────────────────────────────────────── */
+.header-overlay {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.4);
+  z-index: calc(var(--z-header) - 1);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity var(--transition-normal),
+    visibility var(--transition-normal);
+}
+
+.header-overlay.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Body scroll lock when mobile menu is open */
+body.menu-open {
+  overflow: hidden;
+}
+
+/* ── Tablet & below (< 992px) ────────────────────────────────────────── */
+@media (max-width: 991.98px) {
+  /* Disable scroll shrink on mobile (too small already) */
+  .header--scrolled .header-top {
+    padding: var(--space-4) 0;
+  }
+  .header--scrolled .header-top__brand img.logo-kemdikbud {
+    height: 40px;
+  }
+  .header--scrolled .header-top__brand img.logo-sikn {
+    height: 28px;
+  }
+  .header--scrolled .header-top__divider {
+    height: 32px;
+  }
+  .header--scrolled .header-top__badges img {
+    height: 24px;
+  }
+
+  .header-top__badges img {
+    height: 24px;
+  }
+
+  .header-top__brand img.logo-kemdikbud {
+    height: 40px;
+  }
+
+  .header-top__brand img.logo-sikn {
+    height: 28px;
+  }
+
+  .header-mobile-toggle {
+    display: flex;
+  }
+
+  /* Hide active indicator (yellow line) on mobile */
+  .header-nav__item--active > .header-nav__link::after {
+    display: none;
+  }
+
+  .header-nav {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+    width: 100%;
+    max-width: none;
+    flex-direction: column;
+    align-items: stretch;
+    background-color: var(--white);
+    box-shadow: var(--shadow-md);
+    padding: 0;
+    overflow-y: auto;
+    z-index: calc(var(--z-header) + 1);
+    transform: none;
+    max-height: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: max-height var(--transition-normal) ease,
+      opacity var(--transition-normal) ease,
+      visibility var(--transition-normal) ease,
+      padding var(--transition-normal) ease;
+  }
+
+  .header-nav.is-open {
+    max-height: calc(100vh - 80px); /* Fill screen minus header space */
+    padding: var(--space-4) 0;
+    opacity: 1;
+    visibility: visible;
+  }
+
+  .header-nav__link {
+    padding: var(--space-3) var(--space-4);
+    border-bottom: none;
+  }
+
+  .header-nav__item--active > .header-nav__link {
+    border-bottom: none;
+    color: var(--sky-500);
+    background-color: var(--sky-50);
+  }
+
+  /* Mobile dropdown */
+  .header-dropdown {
+    position: static;
+    box-shadow: none;
+    border: none;
+    border-radius: 0;
+    padding: 0;
+    opacity: 1;
+    visibility: hidden;
+    max-height: 0;
+    overflow: hidden;
+    transform: none;
+    background-color: var(--slate-50);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    transition: max-height var(--transition-normal), visibility 0ms;
+  }
+
+  .header-dropdown::before {
+    display: none;
+  }
+
+  /* Reset mega menu width on mobile */
+  .header-dropdown--mega {
+    width: 100%;
+    left: 0;
+    top: 0;
+    transform: none;
+  }
+
+  .header-nav__item--dropdown:hover > .header-dropdown--mega,
+  .header-nav__item--dropdown.is-open > .header-dropdown--mega {
+    transform: none;
+  }
+
+  .header-nav__item--dropdown.is-open > .header-dropdown {
+    visibility: visible;
+    max-height: 1000px;
+  }
+
+  /* Disable hover on mobile — only click/tap */
+  .header-nav__item--dropdown:hover > .header-dropdown {
+    visibility: hidden;
+    max-height: 0;
+  }
+
+  .header-nav__item--dropdown.is-open:hover > .header-dropdown {
+    visibility: visible;
+    max-height: 1000px;
+  }
+
+  .header-dropdown__link {
+    padding-left: var(--space-8);
+  }
+
+  /* Mobile Mega Menu Layout */
+  .mega-menu {
+    flex-direction: column;
+  }
+
+  .mega-menu__left,
+  .mega-menu__right {
+    flex: auto;
+    border-right: none;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  /* Hide the pseudo-element divider on mobile */
+  .mega-menu__left::after {
+    display: none;
+  }
+
+  .mega-menu__left {
+    padding: var(--space-2) 0;
+  }
+
+  .mega-menu__right {
+    padding: var(--space-4) var(--space-4);
+    border-top: 1px solid var(--slate-200);
+  }
+
+  /* Feature card responsive */
+  .feature-card {
+    padding: var(--space-3);
+    gap: var(--space-3);
+  }
+
+  .feature-card__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  .feature-card__title {
+    font-size: 14px;
+  }
+
+  .feature-card__desc {
+    font-size: 11px;
+  }
+
+  .feature-card__arrow {
+    width: 28px;
+    height: 28px;
+  }
+
+  /* Search inside header bottom next to hamburger */
+  .header-bottom .container {
+    gap: var(--space-4);
+  }
+
+  .header-search {
+    display: flex;
+    flex: 1;
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .header-search__input {
+    width: 100%;
+  }
+
+  /* Remove any remaining mobile search clones if they exist */
+  .header-search--mobile {
+    display: none !important;
+  }
+}
+
+/* ── Phone (< 576px) ─────────────────────────────────────────────────── */
+@media (max-width: 575.98px) {
+  .header-top {
+    padding: var(--space-3) 0;
+  }
+
+  .header--scrolled .header-top {
+    padding: var(--space-2) 0;
+  }
+
+  .header-top__brand img.logo-kemdikbud {
+    height: 32px;
+  }
+
+  .header-top__brand img.logo-sikn {
+    height: 24px;
+  }
+
+  .header-top__divider {
+    height: 24px;
+  }
+
+  .header-top__badges img {
+    height: 20px;
+  }
+
+  .header-top__badges {
+    gap: var(--space-2);
+  }
+
+  .header-nav {
+    width: 100%;
+  }
+}

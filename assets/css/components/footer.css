@@ -1,0 +1,136 @@
+/* 
+==========================================================================
+   FOOTER
+========================================================================== 
+*/
+
+.footer {
+  background-color: var(--slate-900);
+  padding-top: 48px;
+  color: var(--white);
+}
+
+.footer__body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  padding-bottom: 48px;
+}
+
+/* Logo row */
+.footer__logo {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.footer__logo img {
+  height: 72px;
+  width: auto;
+}
+
+.footer__logo-text {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.footer__logo-text span {
+  color: var(--amber-400);
+}
+
+/* Ministry name */
+.footer__ministry {
+  color: var(--white);
+}
+
+/* Contact Info */
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.footer__contact-item {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--slate-300);
+}
+
+.footer__contact-item i,
+.footer__contact-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--slate-400);
+}
+
+/* Badge row */
+.footer__badges {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+}
+
+.footer__badges img {
+  height: 40px;
+  width: auto;
+}
+
+/* Bottom bar */
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-5) 0;
+  border-top: 1px solid var(--slate-700);
+}
+
+.footer__copyright {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--slate-400);
+}
+
+/* Floating Back to Top */
+.back-to-top {
+  position: fixed;
+  bottom: 32px;
+  right: 32px;
+  z-index: 999;
+  width: 44px;
+  height: 44px;
+  border-radius: var(--radius-full);
+  background-color: var(--amber-400);
+  color: var(--slate-900);
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  opacity: 0; /* hidden by default */
+  visibility: hidden;
+  transform: translateY(10px);
+}
+
+.back-to-top.is-visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.back-to-top:hover {
+  background-color: var(--amber-500);
+  transform: translateY(-2px);
+}
+
+.back-to-top i,
+.back-to-top svg {
+  width: 22px;
+  height: 22px;
+}
