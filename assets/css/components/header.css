@@ -59,35 +59,35 @@
 }
 
 .header-top__brand img.left-first-logo {
-  height: 48px;
+  height: 60px;
   width: auto;
   transition: height var(--transition-normal);
 }
 
 .header--scrolled .header-top__brand img.left-first-logo {
-  height: 36px;
+  height: 48px;
 }
 
 /* Vertical Divider for Logos */
 .header-top__divider {
   width: 1px;
-  height: 40px;
+  height: 60px;
   background-color: var(--slate-300);
   transition: height var(--transition-normal);
 }
 
 .header--scrolled .header-top__divider {
-  height: 30px;
+  height: 48px;
 }
 
 .header-top__brand img.left-second-logo {
-  height: 36px;
+  height: 44px;
   width: auto;
   transition: height var(--transition-normal);
 }
 
 .header--scrolled .header-top__brand img.left-second-logo {
-  height: 28px;
+  height: 36px;
 }
 
 /* Right-side badges */
@@ -98,13 +98,13 @@
 }
 
 .header-top__badges img {
-  height: 32px;
+  height: 36px;
   width: auto;
   transition: height var(--transition-normal);
 }
 
 .header--scrolled .header-top__badges img {
-  height: 24px;
+  height: 28px;
 }
 
 /* ── Navigation Bar ──────────────────────────────────────────────────── */

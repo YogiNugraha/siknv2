@@ -16,10 +16,86 @@
   white-space: nowrap;
 }
 
-/* Modifier: Outline White */
+/* ==========================
+   SOLID VARIANTS 
+========================== */
+.btn--white {
+  background-color: var(--white);
+  border: 1.2px solid var(--white);
+  color: var(--sky-500);
+}
+
+.btn--white:hover {
+  background-color: var(--slate-300);
+  color: var(--sky-600);
+}
+
+.btn--primary {
+  background-color: var(--sky-500);
+  border: 1.2px solid var(--sky-500);
+  color: var(--white);
+}
+.btn--primary:hover {
+  background-color: var(--sky-600);
+  border-color: var(--sky-600);
+}
+
+.btn--secondary {
+  background-color: var(--slate-500);
+  border: 1.2px solid var(--slate-500);
+  color: var(--white);
+}
+.btn--secondary:hover {
+  background-color: var(--slate-600);
+  border-color: var(--slate-600);
+}
+
+.btn--success {
+  background-color: var(--success-500);
+  border: 1.2px solid var(--success-500);
+  color: var(--white);
+}
+.btn--success:hover {
+  background-color: var(--success-600);
+  border-color: var(--success-600);
+}
+
+.btn--danger {
+  background-color: var(--error-600);
+  border: 1.2px solid var(--error-600);
+  color: var(--white);
+}
+.btn--danger:hover {
+  background-color: var(--error-700);
+  border-color: var(--error-700);
+}
+
+.btn--warning {
+  background-color: var(--warning-500);
+  border: 1.2px solid var(--warning-500);
+  color: var(--white);
+}
+.btn--warning:hover {
+  background-color: var(--warning-600);
+  border-color: var(--warning-600);
+}
+
+.btn--info {
+  background-color: var(--info-500);
+  border: 1.2px solid var(--info-500);
+  color: var(--white);
+}
+.btn--info:hover {
+  background-color: var(--info-600);
+  border-color: var(--info-600);
+}
+
+/* ==========================
+   OUTLINE VARIANTS 
+========================== */
 .btn--outline-white {
   background-color: transparent;
-  border: 2px solid var(--white);
+  border: 1.2px solid var(--white);
   color: var(--white);
 }
 
@@ -28,31 +104,131 @@
   color: var(--sky-500);
 }
 
-/* Modifier: Outline White */
 .btn--outline-primary {
   background-color: transparent;
-  border: 2px solid var(--sky-500);
+  border: 1.2px solid var(--sky-500);
   color: var(--sky-500);
 }
-
 .btn--outline-primary:hover {
   background-color: var(--sky-500);
   color: var(--white);
 }
 
-/* Modifier: Filled White */
-.btn--filled-white {
-  background-color: var(--white);
-  border: 2px solid var(--white);
-  color: var(--sky-500);
+.btn--outline-secondary {
+  background-color: transparent;
+  border: 1.2px solid var(--slate-500);
+  color: var(--slate-500);
+}
+.btn--outline-secondary:hover {
+  background-color: var(--slate-500);
+  color: var(--white);
 }
 
-.btn--filled-white:hover {
-  background-color: var(--slate-300);
-  color: var(--sky-600);
+.btn--outline-success {
+  background-color: transparent;
+  border: 1.2px solid var(--success-500);
+  color: var(--success-500);
+}
+.btn--outline-success:hover {
+  background-color: var(--success-500);
+  color: var(--white);
 }
 
-.btn__icon {
+.btn--outline-danger {
+  background-color: transparent;
+  border: 1.2px solid var(--error-600);
+  color: var(--error-600);
+}
+.btn--outline-danger:hover {
+  background-color: var(--error-600);
+  color: var(--white);
+}
+
+.btn--outline-warning {
+  background-color: transparent;
+  border: 1.2px solid var(--warning-500);
+  color: var(--warning-500);
+}
+.btn--outline-warning:hover {
+  background-color: var(--warning-500);
+  color: var(--white);
+}
+
+.btn--outline-info {
+  background-color: transparent;
+  border: 1.2px solid var(--info-500);
+  color: var(--info-500);
+}
+.btn--outline-info:hover {
+  background-color: var(--info-500);
+  color: var(--white);
+}
+
+/* ==========================
+   SIZE VARIANTS 
+========================== */
+.btn--xs {
+  padding: var(--space-2) var(--space-3);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+}
+.btn--xs .btn__icon {
+  width: 14px;
+  height: 14px;
+}
+
+.btn--sm {
+  padding: var(--space-2) var(--space-4);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 500;
+}
+.btn--sm .btn__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.btn--md {
+  padding: var(--space-3) var(--space-6);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+.btn--md .btn__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.btn--lg {
+  padding: var(--space-4) var(--space-8);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+.btn--lg .btn__icon {
   width: 24px;
   height: 24px;
+}
+
+.btn--xl {
+  padding: var(--space-4) var(--space-10);
+  font-family: var(--bs-font-sans-serif);
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+}
+.btn--xl .btn__icon {
+  width: 28px;
+  height: 28px;
+}
+
+/* Default icon size if no size modifier is used */
+.btn__icon {
+  width: 20px;
+  height: 20px;
 }

@@ -1346,12 +1346,28 @@
    BUTTON STYLES
 ========================================================================= */
 
+/* Extra Large (20/32) */
+.button-extra-large {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 20px;
+  line-height: 32px;
+  font-weight: 500;
+}
+
+/* Large (18/28) */
+.button-large {
+  font-family: var(--bs-font-sans-serif);
+  font-size: 18px;
+  line-height: 28px;
+  font-weight: 500;
+}
+
 /* Medium (16/24) */
 .button-medium {
   font-family: var(--bs-font-sans-serif);
   font-size: 16px;
   line-height: 24px;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Small (14/24) */
