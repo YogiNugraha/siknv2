@@ -13,15 +13,40 @@
   width: 36px;
   height: 36px;
   border-radius: var(--radius-md);
-
-  /* Tema default (bisa di override utilitas) */
-  color: var(--sky-500);
+  background-color: transparent;
+  color: var(--sky-600);
 }
 
 .icon-box i,
 .icon-box svg {
   width: 32px;
   height: 32px;
+}
+
+/* Modifiers for icon-box (Solid background) */
+.icon-box--primary {
+  background-color: var(--sky-50);
+  color: var(--sky-600);
+}
+
+.icon-box--success {
+  background-color: var(--success-50);
+  color: var(--success-600);
+}
+
+.icon-box--warning {
+  background-color: var(--warning-50);
+  color: var(--warning-600);
+}
+
+.icon-box--error {
+  background-color: var(--error-50);
+  color: var(--error-600);
+}
+
+.icon-box--info {
+  background-color: var(--info-50);
+  color: var(--info-600);
 }
 
 /* 
