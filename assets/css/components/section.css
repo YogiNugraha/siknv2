@@ -642,15 +642,18 @@
 /* Swiper Scrollbar */
 .info-terkini__scrollbar {
   flex: 1;
-  height: 4px;
-  background-color: var(--slate-200);
-  border-radius: 2px;
+  height: 3px;
+  background-color: var(--slate-300);
+  border-radius: var(--radius-full);
   position: relative;
 }
 
 .info-terkini__scrollbar .swiper-scrollbar-drag {
   background-color: var(--sky-500);
-  border-radius: 2px;
+  height: 8px;
+  border-radius: var(--radius-full);
+  position: absolute;
+  top: -2.5px;
 }
 
 /* ── Responsive ──────────────────────────────────────────────────────── */
