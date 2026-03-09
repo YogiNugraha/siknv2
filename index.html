@@ -391,10 +391,15 @@
                 implementasi, dan regulasi terbaru dalam satu platform.
               </p>
               <div class="about__actions">
-                <a href="#" class="btn btn--white btn--md">
+                <button
+                  type="button"
+                  class="btn btn--white btn--md"
+                  data-bs-toggle="modal"
+                  data-bs-target="#videoModal"
+                >
                   <i data-lucide="play" class="btn__icon"></i>
                   Video Cara Penggunaan
-                </a>
+                </button>
                 <a href="#" class="btn btn--outline-white btn--md">
                   Selengkapnya
                 </a>
@@ -806,6 +811,48 @@
     <button class="back-to-top" id="backToTop" aria-label="Kembali ke atas">
       <i data-lucide="arrow-up"></i>
     </button>
+
+    <!-- ==================== VIDEO MODAL ==================== -->
+    <div
+      class="modal fade video-modal"
+      id="videoModal"
+      tabindex="-1"
+      aria-labelledby="videoModalLabel"
+      aria-hidden="true"
+    >
+      <button
+        type="button"
+        class="video-modal__close"
+        data-bs-dismiss="modal"
+        aria-label="Close"
+      >
+        <i
+          data-lucide="x"
+          style="width: 24px; height: 24px; color: var(--slate-900)"
+        ></i>
+      </button>
+
+      <div
+        class="modal-dialog modal-dialog-centered modal-xl"
+        style="max-width: 900px"
+      >
+        <div class="modal-content bg-transparent border-0">
+          <div class="modal-body p-0">
+            <div class="ratio ratio-16x9">
+              <iframe
+                src="https://www.youtube.com/embed/IJYPVNJlIsw?si=QQtJUo6lHQcHW6RA"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowfullscreen
+                class="video-modal__iframe"
+              ></iframe>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ==================== END VIDEO MODAL ==================== -->
 
     <!-- ***** JAVASCRIPTS ***** -->
     <script src="assets/plugins/jquery/jquery.min.js"></script>

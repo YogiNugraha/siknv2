@@ -236,6 +236,51 @@
   aspect-ratio: 1 / 1;
 }
 
+}
+
+/* ── About Video Modal ────────────────────────────────────────────────── */
+.video-modal {
+  --bs-modal-bg: transparent;
+  padding-right: 0 !important;
+}
+
+.video-modal ~ .modal-backdrop {
+  background-color: var(--slate-900);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.video-modal ~ .modal-backdrop.show {
+  opacity: 0.8 !important; /* Biraz transparansi agar blur terlihat */
+}
+
+.video-modal__close {
+  position: fixed;
+  top: var(--space-6);
+  right: var(--space-6);
+  z-index: 1055;
+  width: 40px;
+  height: 40px;
+  background-color: var(--white);
+  border-radius: var(--space-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.video-modal__close:hover {
+  background-color: var(--slate-200);
+}
+
+.video-modal__iframe {
+  border-radius: var(--radius-lg);
+  box-shadow: 0 0 120px rgba(0, 167, 239, 0.4); /* Glow shadow efek biru langit */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
 /* 
 ==========================================================================
    STRUKTUR KURIKULUM SECTION
