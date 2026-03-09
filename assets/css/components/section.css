@@ -83,7 +83,7 @@
   border-top: 8px solid var(--sky-400);
   border-radius: var(--radius-lg);
   padding: var(--space-4) var(--space-6);
-  box-shadow: var(--shadow-md);
+  /* box-shadow: var(--shadow-md); */
   height: 208px;
 }
 
@@ -518,7 +518,7 @@
 }
 
 .news-card:hover {
-  box-shadow: var(--shadow-md);
+  box-shadow: var(--shadow-lg);
 }
 
 /* Card Image Side */
