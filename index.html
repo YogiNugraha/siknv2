@@ -281,22 +281,18 @@
               >
               <div class="quick-links__nav">
                 <button
-                  class="quick-links__nav-btn"
+                  class="btn-nav"
                   id="quickLinkPrev"
                   aria-label="Previous"
                 >
                   <i
-                    data-lucide="chevron-left"
+                    data-lucide="arrow-left"
                     style="width: 18px; height: 18px"
                   ></i>
                 </button>
-                <button
-                  class="quick-links__nav-btn"
-                  id="quickLinkNext"
-                  aria-label="Next"
-                >
+                <button class="btn-nav" id="quickLinkNext" aria-label="Next">
                   <i
-                    data-lucide="chevron-right"
+                    data-lucide="arrow-right"
                     style="width: 18px; height: 18px"
                   ></i>
                 </button>
@@ -617,7 +613,7 @@
               <!-- Card 1 -->
               <div class="swiper-slide">
                 <a href="#" class="news-card">
-                  <span class="news-card__badge">Terbaru</span>
+                  <span class="news-card__badge">Baru</span>
                   <span class="news-card__badge-accent"></span>
                   <div class="news-card__image">
                     <img
@@ -626,14 +622,17 @@
                     />
                   </div>
                   <div class="news-card__content">
-                    <span class="news-card__tag">Publikasi</span>
+                    <div class="news-card__header">
+                      <span class="news-card__date">7 Januari 2026</span>
+                      <span class="news-card__line"></span>
+                      <span class="news-card__tag">Publikasi</span>
+                    </div>
                     <p class="news-card__desc">
                       Lorem ipsum dolor sit amet consectetur. Imperdiet
                       adipiscing lacus orci posuere quam feugiat Habitasse
-                      aliquet arcu accumsan od orci posuere quam feugiat
-                      Habitass...
+                      aliquet arcu accumsan
                     </p>
-                    <span class="news-card__date">7 Januari 2026</span>
+                    <span class="news-card__topic">Nama Topic Lorem Ipsum</span>
                   </div>
                 </a>
               </div>
@@ -641,7 +640,7 @@
               <!-- Card 2 -->
               <div class="swiper-slide">
                 <a href="#" class="news-card">
-                  <span class="news-card__badge">Terbaru</span>
+                  <span class="news-card__badge">Baru</span>
                   <span class="news-card__badge-accent"></span>
                   <div class="news-card__image">
                     <img
@@ -650,13 +649,17 @@
                     />
                   </div>
                   <div class="news-card__content">
-                    <span class="news-card__tag">Praktik Baik</span>
+                    <div class="news-card__header">
+                      <span class="news-card__date">7 Januari 2026</span>
+                      <span class="news-card__line"></span>
+                      <span class="news-card__tag">Praktik Baik</span>
+                    </div>
                     <p class="news-card__desc">
                       Lorem ipsum dolor sit amet consectetur. Imperdiet
                       adipiscing lacus orci posuere quam feugiat Habitasse
-                      aliquet arcu accumsan od...
+                      aliquet arcu accumsan
                     </p>
-                    <span class="news-card__date">7 Januari 2026</span>
+                    <span class="news-card__topic">Nama Topic Lorem Ipsum</span>
                   </div>
                 </a>
               </div>
@@ -664,7 +667,7 @@
               <!-- Card 3 -->
               <div class="swiper-slide">
                 <a href="#" class="news-card">
-                  <span class="news-card__badge body-small-bold">Terbaru</span>
+                  <span class="news-card__badge body-small-bold">Baru</span>
                   <span class="news-card__badge-accent"></span>
                   <div class="news-card__image">
                     <img
@@ -673,13 +676,17 @@
                     />
                   </div>
                   <div class="news-card__content">
-                    <span class="news-card__tag">Regulasi</span>
+                    <div class="news-card__header">
+                      <span class="news-card__date">5 Januari 2026</span>
+                      <span class="news-card__line"></span>
+                      <span class="news-card__tag">Regulasi</span>
+                    </div>
                     <p class="news-card__desc">
                       Lorem ipsum dolor sit amet consectetur. Imperdiet
                       adipiscing lacus orci posuere quam feugiat Habitasse
-                      aliquet arcu accumsan od...
+                      aliquet arcu accumsan
                     </p>
-                    <span class="news-card__date">5 Januari 2026</span>
+                    <span class="news-card__topic">Nama Topic Lorem Ipsum</span>
                   </div>
                 </a>
               </div>
@@ -687,7 +694,7 @@
               <!-- Card 4 -->
               <div class="swiper-slide">
                 <a href="#" class="news-card">
-                  <span class="news-card__badge body-small-bold">Terbaru</span>
+                  <span class="news-card__badge body-small-bold">Baru</span>
                   <span class="news-card__badge-accent"></span>
                   <div class="news-card__image">
                     <img
@@ -696,13 +703,17 @@
                     />
                   </div>
                   <div class="news-card__content">
-                    <span class="news-card__tag">Bahan Ajar</span>
+                    <div class="news-card__header">
+                      <span class="news-card__date">3 Januari 2026</span>
+                      <span class="news-card__line"></span>
+                      <span class="news-card__tag">Bahan Ajar</span>
+                    </div>
                     <p class="news-card__desc">
                       Lorem ipsum dolor sit amet consectetur. Imperdiet
                       adipiscing lacus orci posuere quam feugiat Habitasse
-                      aliquet arcu accumsan od...
+                      aliquet arcu accumsan
                     </p>
-                    <span class="news-card__date">3 Januari 2026</span>
+                    <span class="news-card__topic">Nama Topic Lorem Ipsum</span>
                   </div>
                 </a>
               </div>
@@ -713,17 +724,13 @@
           <div class="info-terkini__footer">
             <div class="info-terkini__nav">
               <button
-                class="info-terkini__nav-btn"
+                class="btn-nav"
                 id="infoTerkiniPrev"
                 aria-label="Previous"
               >
                 <i data-lucide="arrow-left"></i>
               </button>
-              <button
-                class="info-terkini__nav-btn"
-                id="infoTerkiniNext"
-                aria-label="Next"
-              >
+              <button class="btn-nav" id="infoTerkiniNext" aria-label="Next">
                 <i data-lucide="arrow-right"></i>
               </button>
             </div>

@@ -232,3 +232,31 @@
   width: 20px;
   height: 20px;
 }
+
+/* ==========================
+   NAVIGATION ARROW BUTTON
+========================== */
+.btn-nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 52px;
+  height: 40px;
+  border-radius: 100px;
+  border: 1px solid var(--sky-500);
+  background-color: var(--white);
+  color: var(--sky-500);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.btn-nav:hover {
+  border-color: var(--sky-400);
+  color: var(--sky-400);
+  background-color: var(--sky-50);
+}
+
+.btn-nav.swiper-button-disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
