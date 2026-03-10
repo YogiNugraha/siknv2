@@ -10,7 +10,7 @@
   overflow: visible;
 }
 
-/* Background layer using hero-background.jpg */
+/* Background layering*/
 .hero__bg {
   position: relative;
   background-image: linear-gradient(
@@ -482,6 +482,7 @@
   padding-top: 96px;
   padding-bottom: 192px;
   background-color: var(--slate-50);
+  overflow-x: clip;
 }
 
 /* Section Header */
@@ -494,7 +495,7 @@
 
 /* Slider container — override Swiper's overflow to let badges show */
 .info-terkini__slider {
-  overflow-x: clip !important;
+  overflow-x: visible !important;
   overflow-y: visible !important;
   margin-bottom: var(--space-8);
 }
@@ -736,6 +737,13 @@
     min-height: auto;
   }
 
+  .hero__content h1 {
+    font-family: var(--bs-font-sans-serif);
+  font-size: 44px;
+  line-height: 56px;
+  font-weight: 500;
+}
+
   .hero__content {
     flex: auto;
     max-width: 100%;
@@ -802,6 +810,22 @@
 
   .curriculum-item__desc {
     padding-left: 0;
+  }
+
+  /* Info Terkini / News Card responsive */
+  .news-card {
+    flex-direction: column;
+  }
+
+  .news-card__image {
+    flex: none;
+    width: 100%;
+    margin: 0;
+    border-radius: var(--radius-xl) var(--radius-xl) 0 0;
+  }
+
+  .news-card__content {
+    border-radius: 0 0 var(--radius-xl) var(--radius-xl);
   }
 }
 

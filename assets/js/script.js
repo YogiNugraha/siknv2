@@ -148,6 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
     if (infoTerkiniEl) {
       new Swiper(".info-terkini__slider", {
         slidesPerView: 1.1,
+        centeredSlides: true,
         spaceBetween: 24,
         grabCursor: true,
         navigation: {
@@ -160,7 +161,7 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         breakpoints: {
           768: { slidesPerView: 1.5, spaceBetween: 24 },
-          992: { slidesPerView: 1.5, spaceBetween: 32 },
+          992: { slidesPerView: 1.3, spaceBetween: 32 },
         },
       });
     }

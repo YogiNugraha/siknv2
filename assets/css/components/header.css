@@ -541,6 +541,7 @@ body.menu-open {
   /* Mobile dropdown */
   .header-dropdown {
     position: static;
+    min-width: 0;
     box-shadow: none;
     border: none;
     border-radius: 0;
@@ -566,6 +567,7 @@ body.menu-open {
     left: 0;
     top: 0;
     transform: none;
+    flex-direction: column;
   }
 
   .header-nav__item--dropdown:hover > .header-dropdown--mega,
@@ -596,6 +598,7 @@ body.menu-open {
   /* Mobile Mega Menu Layout */
   .mega-menu {
     flex-direction: column;
+    width: 100%;
   }
 
   .mega-menu__left,
