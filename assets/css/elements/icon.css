@@ -75,8 +75,31 @@
   border-color: var(--sky-600);
 }
 
+.icon-arrow-filled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  background-color: var(--sky-500);
+  border-radius: var(--radius-full);
+  color: var(--white);
+  text-decoration: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.icon-arrow-filled:hover,
+a:hover .icon-arrow-filled {
+  color: var(--white);
+  border: 1px solid var(--sky-600);
+  scale: 1.15;
+}
+
 .icon-arrow i,
-.icon-arrow svg {
+.icon-arrow svg,
+.icon-arrow-filled i,
+.icon-arrow-filled svg {
   width: 16px;
   height: 16px;
 }

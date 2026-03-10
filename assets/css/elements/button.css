@@ -19,149 +19,280 @@
 /* ==========================
    SOLID VARIANTS 
 ========================== */
+
+/* Blue */
+.btn--primary {
+  background-color: var(--sky-500);
+  color: var(--white);
+}
+
+.btn.btn--primary:hover,
+.btn.btn--primary:active {
+  background-color: var(--sky-600);
+  color: var(--slate-50);
+}
+
+.btn.btn--primary:active {
+  transform: scale(0.98);
+}
+
+/* White */
 .btn--white {
   background-color: var(--white);
-  border: 1.2px solid var(--white);
   color: var(--sky-500);
 }
 
-.btn--white:hover {
-  background-color: var(--slate-300);
-  color: var(--sky-600);
+.btn.btn--white:hover,
+.btn.btn--white:active {
+  background-color: var(--slate-200);
+  color: var(--sky-500);
 }
 
-.btn--primary {
-  background-color: var(--sky-500);
-  border: 1.2px solid var(--sky-500);
+.btn.btn--white:active {
+  transform: scale(0.98);
+}
+
+/* Amber */
+.btn--amber {
+  background-color: var(--amber-500);
   color: var(--white);
 }
-.btn--primary:hover {
-  background-color: var(--sky-600);
-  border-color: var(--sky-600);
+
+.btn.btn--amber:hover,
+.btn.btn--amber:active {
+  background-color: var(--amber-600);
+  color: var(--slate-50);
 }
 
-.btn--secondary {
-  background-color: var(--slate-500);
-  border: 1.2px solid var(--slate-500);
-  color: var(--white);
-}
-.btn--secondary:hover {
-  background-color: var(--slate-600);
-  border-color: var(--slate-600);
+.btn.btn--amber:active {
+  transform: scale(0.98);
 }
 
+/* Success */
 .btn--success {
   background-color: var(--success-500);
-  border: 1.2px solid var(--success-500);
   color: var(--white);
 }
-.btn--success:hover {
+
+.btn.btn--success:hover,
+.btn.btn--success:active {
   background-color: var(--success-600);
-  border-color: var(--success-600);
+  color: var(--slate-50);
 }
 
-.btn--danger {
-  background-color: var(--error-600);
-  border: 1.2px solid var(--error-600);
+.btn.btn--success:active {
+  transform: scale(0.98);
+}
+
+/* Error */
+.btn--error {
+  background-color: var(--error-500);
   color: var(--white);
 }
-.btn--danger:hover {
-  background-color: var(--error-700);
-  border-color: var(--error-700);
+
+.btn.btn--error:hover,
+.btn.btn--error:active {
+  background-color: var(--error-600);
+  color: var(--slate-50);
 }
 
+.btn.btn--error:active {
+  transform: scale(0.98);
+}
+
+/* Warning */
 .btn--warning {
   background-color: var(--warning-500);
-  border: 1.2px solid var(--warning-500);
   color: var(--white);
-}
-.btn--warning:hover {
-  background-color: var(--warning-600);
-  border-color: var(--warning-600);
 }
 
+.btn.btn--warning:hover,
+.btn.btn--warning:active {
+  background-color: var(--warning-600);
+  color: var(--slate-50);
+}
+
+.btn.btn--warning:active {
+  transform: scale(0.98);
+}
+
+/* Info */
 .btn--info {
   background-color: var(--info-500);
-  border: 1.2px solid var(--info-500);
   color: var(--white);
 }
-.btn--info:hover {
+
+.btn.btn--info:hover,
+.btn.btn--info:active {
   background-color: var(--info-600);
-  border-color: var(--info-600);
+  color: var(--slate-50);
+}
+
+.btn.btn--info:active {
+  transform: scale(0.98);
+}
+
+/* Slate */
+.btn--slate {
+  background-color: var(--slate-500);
+  color: var(--white);
+}
+
+.btn.btn--slate:hover,
+.btn.btn--slate:active {
+  background-color: var(--slate-600);
+  color: var(--slate-50);
+}
+
+.btn.btn--slate:active {
+  transform: scale(0.98);
 }
 
 /* ==========================
    OUTLINE VARIANTS 
 ========================== */
+/* Outline Blue */
+.btn--outline-primary {
+  background-color: transparent;
+  border: 1.2px solid var(--sky-500);
+  color: var(--sky-500);
+}
+
+.btn.btn--outline-primary:hover,
+.btn.btn--outline-primary:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--sky-500);
+  color: var(--sky-500);
+}
+
+.btn.btn--outline-primary:active {
+  transform: scale(0.98);
+}
+
+/* Outline White */
 .btn--outline-white {
   background-color: transparent;
   border: 1.2px solid var(--white);
   color: var(--white);
 }
 
-.btn--outline-white:hover {
-  background-color: var(--white);
-  color: var(--sky-500);
-}
-
-.btn--outline-primary {
-  background-color: transparent;
-  border: 1.2px solid var(--sky-500);
-  color: var(--sky-500);
-}
-.btn--outline-primary:hover {
-  background-color: var(--sky-500);
+.btn.btn--outline-white:hover,
+.btn.btn--outline-white:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--white);
   color: var(--white);
 }
 
-.btn--outline-secondary {
-  background-color: transparent;
-  border: 1.2px solid var(--slate-500);
-  color: var(--slate-500);
-}
-.btn--outline-secondary:hover {
-  background-color: var(--slate-500);
-  color: var(--white);
+.btn.btn--outline-white:active {
+  transform: scale(0.98);
 }
 
+/* Outline Amber */
+.btn--outline-amber {
+  background-color: transparent;
+  border: 1.2px solid var(--amber-500);
+  color: var(--amber-500);
+}
+
+.btn.btn--outline-amber:hover,
+.btn.btn--outline-amber:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--amber-500);
+  color: var(--amber-500);
+}
+
+.btn.btn--outline-amber:active {
+  transform: scale(0.98);
+}
+
+/* Outline Success */
 .btn--outline-success {
   background-color: transparent;
   border: 1.2px solid var(--success-500);
   color: var(--success-500);
 }
-.btn--outline-success:hover {
-  background-color: var(--success-500);
-  color: var(--white);
+
+.btn.btn--outline-success:hover,
+.btn.btn--outline-success:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--success-500);
+  color: var(--success-500);
 }
 
-.btn--outline-danger {
+.btn.btn--outline-success:active {
+  transform: scale(0.98);
+}
+
+/* Outline Error */
+.btn--outline-error {
   background-color: transparent;
-  border: 1.2px solid var(--error-600);
-  color: var(--error-600);
-}
-.btn--outline-danger:hover {
-  background-color: var(--error-600);
-  color: var(--white);
+  border: 1.2px solid var(--error-500);
+  color: var(--error-500);
 }
 
+.btn.btn--outline-error:hover,
+.btn.btn--outline-error:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--error-500);
+  color: var(--error-500);
+}
+
+.btn.btn--outline-error:active {
+  transform: scale(0.98);
+}
+
+/* Outline Warning */
 .btn--outline-warning {
   background-color: transparent;
   border: 1.2px solid var(--warning-500);
   color: var(--warning-500);
 }
-.btn--outline-warning:hover {
-  background-color: var(--warning-500);
-  color: var(--white);
+
+.btn.btn--outline-warning:hover,
+.btn.btn--outline-warning:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--warning-500);
+  color: var(--warning-500);
 }
 
+.btn.btn--outline-warning:active {
+  transform: scale(0.98);
+}
+
+/* Outline Info */
 .btn--outline-info {
   background-color: transparent;
   border: 1.2px solid var(--info-500);
   color: var(--info-500);
 }
-.btn--outline-info:hover {
-  background-color: var(--info-500);
-  color: var(--white);
+
+.btn.btn--outline-info:hover,
+.btn.btn--outline-info:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--info-500);
+  color: var(--info-500);
+}
+
+.btn.btn--outline-info:active {
+  transform: scale(0.98);
+}
+
+/* Outline Slate */
+.btn--outline-slate {
+  background-color: transparent;
+  border: 1.2px solid var(--slate-500);
+  color: var(--slate-500);
+}
+
+.btn.btn--outline-slate:hover,
+.btn.btn--outline-slate:active {
+  background-color: var(--black-08);
+  border: 1.2px solid var(--slate-500);
+  color: var(--slate-500);
+}
+
+.btn.btn--outline-slate:active {
+  transform: scale(0.98);
 }
 
 /* ==========================
@@ -231,32 +362,4 @@
 .btn__icon {
   width: 20px;
   height: 20px;
-}
-
-/* ==========================
-   NAVIGATION ARROW BUTTON
-========================== */
-.btn-nav {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 52px;
-  height: 40px;
-  border-radius: 100px;
-  border: 1px solid var(--sky-500);
-  background-color: var(--white);
-  color: var(--sky-500);
-  cursor: pointer;
-  transition: all var(--transition-fast);
-}
-
-.btn-nav:hover {
-  border-color: var(--sky-400);
-  color: var(--sky-400);
-  background-color: var(--sky-50);
-}
-
-.btn-nav.swiper-button-disabled {
-  opacity: 0.4;
-  cursor: not-allowed;
 }
