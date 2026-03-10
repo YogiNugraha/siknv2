@@ -142,6 +142,31 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
+  // ── Kebijakan Swiper ──────────────────────────────────────────────────
+  if (typeof Swiper !== "undefined") {
+    const kebijakanEl = document.querySelector(".kebijakan__slider");
+    if (kebijakanEl) {
+      new Swiper(".kebijakan__slider", {
+        slidesPerView: "auto",
+        centeredSlides: true,
+        spaceBetween: 24,
+        grabCursor: true,
+        navigation: {
+          prevEl: "#kebijakanPrev",
+          nextEl: "#kebijakanNext",
+        },
+        scrollbar: {
+          el: "#kebijakanScrollbar",
+          draggable: true,
+        },
+        breakpoints: {
+          768: { spaceBetween: 16 },
+          992: { spaceBetween: 24 },
+        },
+      });
+    }
+  }
+
   // ── Info Terkini Swiper ──────────────────────────────────────────────────
   if (typeof Swiper !== "undefined") {
     const infoTerkiniEl = document.querySelector(".info-terkini__slider");

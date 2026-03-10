@@ -173,6 +173,97 @@
   color: var(--white);
   border-color: var(--sky-500);
 }
+
+
+/* 
+==========================================================================
+   KEBIJAKAN SECTION
+========================================================================== 
+*/
+
+.kebijakan {
+  padding: 152px 0 96px 0;
+  overflow-x: clip;
+  background-color: var(--slate-50);
+}
+
+/* Header */
+.kebijakan__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 56px;
+}
+
+/* Slider Container */
+.kebijakan__slider {
+  overflow-x: visible !important;
+  overflow-y: visible !important;
+  margin-bottom: var(--space-8);
+}
+
+.kebijakan__slider .swiper-wrapper {
+  overflow: visible !important;
+}
+
+.kebijakan__slider .swiper-slide {
+  overflow: visible !important;
+  padding-left: 12px;
+  width: auto;
+}
+
+/* Base Card */
+.kebijakan-card {
+  display: block;
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  text-decoration: none;
+  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  width: 1200px;
+  height: 252px;
+}
+
+/* Adjust sizes globally in responsive section, max height roughly matches design */
+.kebijakan-card__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.kebijakan-card:hover {
+  box-shadow: var(--shadow-lg);
+}
+
+.kebijakan__footer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-6);
+  margin-top: var(--space-6);
+}
+
+.kebijakan__nav {
+  display: flex;
+  gap: var(--space-3);
+}
+
+/* Scrollbar */
+.kebijakan__scrollbar {
+  flex: 1;
+  height: 3px;
+  background-color: var(--slate-300);
+  border-radius: var(--radius-full);
+  position: relative;
+}
+
+.kebijakan__scrollbar .swiper-scrollbar-drag {
+  background-color: var(--sky-500);
+  height: 8px;
+  border-radius: var(--radius-full);
+  position: absolute;
+  top: -2.5px;
+}
+
 /* 
 ==========================================================================
    ABOUT SECTION
@@ -181,7 +272,7 @@
 
 .about {
   padding: 96px 0;
-  padding-top: 152px;
+  padding-top: 96px;
 }
 
 .about__card {
