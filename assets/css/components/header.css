@@ -134,7 +134,7 @@
 
 /* Nav item holding a mega menu */
 .header-nav__item.header-nav__item--mega {
-  position: static !important;
+  position: relative;
 }
 
 /* Nav link */
@@ -219,9 +219,17 @@
 /* Mega Menu Modifier */
 .header-dropdown--mega {
   width: 850px;
-  left: 50%;
-  top: calc(100% + 1px);
-  transform: translate(-50%, 8px);
+  left: 0;
+  top: calc(125% + 1px);
+  padding: 0;
+  flex-direction: row;
+  gap: 0;
+}
+
+.header-dropdown--mega-2 {
+  width: 720px;
+  left: 0;
+  top: calc(125% + 1px);
   padding: 0;
   flex-direction: row;
   gap: 0;
@@ -237,7 +245,7 @@
 
 .header-nav__item--dropdown:hover > .header-dropdown--mega,
 .header-nav__item--dropdown.is-open > .header-dropdown--mega {
-  transform: translate(-50%, 0);
+  transform: translateY(0);
 }
 
 /* Dropdown link */
@@ -292,6 +300,72 @@
   flex-direction: column;
   gap: var(--space-4);
   border-radius: 0 var(--radius-xl) var(--radius-xl) 0;
+}
+
+/* Feature Card 2 */
+.feature-card-2 {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  gap: var(--space-4);
+  padding: var(--space-4);
+  background-color: var(--white);
+  border: 1px solid var(--slate-300);
+  border-radius: var(--radius-lg);
+  text-decoration: none;
+  transition: border-color var(--transition-fast),
+    box-shadow var(--transition-fast);
+}
+
+.feature-card-2:hover {
+  border-color: var(--sky-300);
+  box-shadow: var(--shadow-sm);
+}
+
+.feature-card-2__header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  flex-shrink: 0;
+  padding-bottom: var(--space-4);
+  border-bottom: 1px solid var(--slate-300);
+}
+
+.feature-card-2__header > img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
+}
+
+.feature-card-2__content {
+  flex: 1;
+  min-width: 0; /* Prevents long unbreakable text from overflowing flex container */
+}
+
+.feature-card-2__title {
+  display: block;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--slate-800);
+  margin-bottom: var(--space-1);
+}
+
+.feature-card-2__desc {
+  display: block;
+  font-family: var(--bs-font-sans-serif);
+  font-size: 12px;
+  color: var(--slate-500);
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
+.feature-card-2:hover .icon-arrow {
+  background-color: var(--sky-600);
+  color: var(--white);
+  border-color: var(--sky-600);
 }
 
 /* Feature Card */
