@@ -15,8 +15,39 @@
       content="SIKN, kurikulum nasional, pendidikan, kemendikdasmen"
     />
     <title>SIKN - Sistem Informasi Kurikulum Nasional</title>
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://kurikulum.kemendikdasmen.go.id/" />
+    <meta
+      property="og:title"
+      content="SIKN - Sistem Informasi Kurikulum Nasional"
+    />
+    <meta
+      property="og:description"
+      content="Pusat informasi resmi Kurikulum Nasional untuk guru, kepala sekolah, dan pengelola satuan pendidikan."
+    />
+    <meta property="og:image" content="assets/images/hero-right.png" />
+    <meta property="og:site_name" content="SIKN Kemendikdasmen" />
+    <meta property="og:locale" content="id_ID" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta
+      property="twitter:url"
+      content="https://kurikulum.kemendikdasmen.go.id/"
+    />
+    <meta
+      property="twitter:title"
+      content="SIKN - Sistem Informasi Kurikulum Nasional"
+    />
+    <meta
+      property="twitter:description"
+      content="Pusat informasi resmi Kurikulum Nasional untuk guru, kepala sekolah, dan pengelola satuan pendidikan."
+    />
+    <meta property="twitter:image" content="assets/images/hero-right.png" />
     <!-- Favicon -->
-    <link href="assets/images/logo-tutwuri.png" rel="shortcut icon" />
+    <link href="assets/images/logo-twh.svg" rel="shortcut icon" />
 
     <!-- CSS -->
     <link
@@ -40,23 +71,23 @@
         >
           <a href="index.html" class="header-top__brand">
             <img
-              src="assets/images/logo-tutwuri.png"
+              src="assets/images/logo-twh.svg"
               alt="Logo Kemendikdasmen"
               class="left-first-logo"
             />
             <span class="header-top__divider"></span>
             <img
-              src="assets/images/logo-sikn.png"
+              src="assets/images/logo-sikn.svg"
               alt="SIKN - Sistem Informasi Kurikulum Nasional"
               class="left-second-logo"
             />
           </a>
           <div class="header-top__badges">
             <img
-              src="assets/images/badge-pendidikan-bermutu.png"
+              src="assets/images/logo-tagar.svg"
               alt="Pendidikan Bermutu Untuk Semua"
             />
-            <img src="assets/images/badge-ramah.png" alt="Ramah" />
+            <img src="assets/images/logo-ramah.svg" alt="Ramah" />
           </div>
         </div>
       </div>
@@ -123,8 +154,9 @@
                     <a href="#" class="feature-card-2">
                       <div class="feature-card-2__header">
                         <img
-                          src="assets/images/logo-sikn-left.png"
+                          src="assets/images/logo-sikn-left.svg"
                           alt="Buku"
+                          loading="lazy"
                         />
                         <div class="icon-arrow">
                           <i data-lucide="arrow-up-right"></i>
@@ -175,15 +207,16 @@
                     <a href="#" class="feature-card">
                       <div class="feature-card__img">
                         <img
-                          src="assets/images/logo-bahan-ajar.png"
+                          src="assets/images/logo-rgtk.svg"
                           alt="Buku"
+                          loading="lazy"
                         />
                       </div>
                       <div class="feature-card__content">
                         <span class="feature-card__title">Ruang GTK</span>
                         <span class="feature-card__desc"
-                          >Lorem ipsum dolor sit amet consectetur. Neque sit
-                          suspendisse faucibus netus.</span
+                          >Sumber inspirasi peningkatan kompetensi serta kinerja
+                          Guru dan Tenaga Kependidikan (GTK).</span
                         >
                       </div>
                       <div class="icon-arrow">
@@ -196,13 +229,17 @@
 
                     <a href="#" class="feature-card">
                       <div class="feature-card__img">
-                        <img src="assets/images/logo-buku.png" alt="Buku" />
+                        <img
+                          src="assets/images/logo-sibi.svg"
+                          alt="Buku"
+                          loading="lazy"
+                        />
                       </div>
                       <div class="feature-card__content">
                         <span class="feature-card__title">Buku (SIBI)</span>
                         <span class="feature-card__desc"
-                          >Lorem ipsum dolor sit amet consectetur. Neque sit
-                          suspendisse faucibus netus.</span
+                          >Temukan buku dan bahan ajar dari pusat perbukuan
+                          resmi.</span
                         >
                       </div>
                       <div class="icon-arrow">
@@ -418,6 +455,7 @@
                     src="assets/images/kebijakan_1.png"
                     alt="Panduan Mata Pelajaran"
                     class="kebijakan-card__img"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -429,6 +467,7 @@
                     src="assets/images/kebijakan_2.png"
                     alt="Panduan Kurikulum Merdeka"
                     class="kebijakan-card__img"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -440,6 +479,7 @@
                     src="assets/images/kebijakan_3.png"
                     alt="Regulasi Terbaru Pendidikan"
                     class="kebijakan-card__img"
+                    loading="lazy"
                   />
                 </a>
               </div>
@@ -495,6 +535,7 @@
               <img
                 src="assets/images/about.jpg"
                 alt="Tim guru berdiskusi menggunakan laptop"
+                loading="lazy"
               />
             </div>
           </div>
@@ -598,16 +639,19 @@
                 src="assets/images/struktur-1.jpg"
                 alt="Intrakurikuler"
                 class="struktur__img is-active"
+                loading="lazy"
               />
               <img
                 src="assets/images/struktur-2.jpg"
                 alt="Kokurikuler"
                 class="struktur__img"
+                loading="lazy"
               />
               <img
                 src="assets/images/struktur-3.jpg"
                 alt="Ekstrakurikuler"
                 class="struktur__img"
+                loading="lazy"
               />
             </div>
           </div>
@@ -624,31 +668,37 @@
               class="gallery-marquee__img"
               src="assets/images/gallery-1.jpg"
               alt="Aktivitas siswa di kelas"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-2.jpg"
               alt="Guru mengajar dengan globus"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-3.jpg"
               alt="Siswa bermain di halaman sekolah"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-4.jpg"
               alt="Kegiatan belajar kreatif"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-5.jpg"
               alt="Pembelajaran outdoor"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-6.jpg"
               alt="Diskusi kelompok siswa"
+              loading="lazy"
             />
           </div>
           <!-- Grup Gambar 2  -->
@@ -657,31 +707,37 @@
               class="gallery-marquee__img"
               src="assets/images/gallery-1.jpg"
               alt="Aktivitas siswa di kelas"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-2.jpg"
               alt="Guru mengajar dengan globus"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-3.jpg"
               alt="Siswa bermain di halaman sekolah"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-4.jpg"
               alt="Kegiatan belajar kreatif"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-5.jpg"
               alt="Pembelajaran outdoor"
+              loading="lazy"
             />
             <img
               class="gallery-marquee__img"
               src="assets/images/gallery-6.jpg"
               alt="Diskusi kelompok siswa"
+              loading="lazy"
             />
           </div>
         </div>
@@ -709,6 +765,7 @@
                     <img
                       src="assets/images/news-1.jpg"
                       alt="Panduan Pemilihan Mapel Pilihan SMA"
+                      loading="lazy"
                     />
                   </div>
                   <div class="news-card__content">
@@ -743,6 +800,7 @@
                     <img
                       src="assets/images/news-2.jpg"
                       alt="Praktik Baik Pembelajaran"
+                      loading="lazy"
                     />
                   </div>
                   <div class="news-card__content">
@@ -777,6 +835,7 @@
                     <img
                       src="assets/images/news-3.jpg"
                       alt="Implementasi Kurikulum Merdeka"
+                      loading="lazy"
                     />
                   </div>
                   <div class="news-card__content">
@@ -811,6 +870,7 @@
                     <img
                       src="assets/images/news-4.jpg"
                       alt="Panduan Bahan Ajar"
+                      loading="lazy"
                     />
                   </div>
                   <div class="news-card__content">
@@ -870,18 +930,24 @@
           <div class="footer__top-inner">
             <a href="#" class="footer__brand">
               <img
-                src="assets/images/logo-kemendikdasmen.png"
+                src="assets/images/logo-dikdasmen.svg"
                 alt="Logo Kemendikdasmen"
                 class="footer__brand-logo"
+                loading="lazy"
               />
               <!-- <span class="footer__brand-name">Kemen<span>dikdasmen</span></span> -->
             </a>
             <div class="footer__badges">
               <img
-                src="assets/images/logo-tagar-white.png"
+                src="assets/images/logo-tagar-w.svg"
                 alt="Pendidikan Bermutu Untuk Semua"
+                loading="lazy"
               />
-              <img src="assets/images/logo-ramah-white.png" alt="RAMAH" />
+              <img
+                src="assets/images/logo-ramah-w.svg"
+                alt="RAMAH"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -976,7 +1042,11 @@
             <div class="footer__quicklinks">
               <a href="#" class="footer__quicklink-card">
                 <div class="footer__quicklink-img">
-                  <img src="assets/images/logo-sikn-left.png" alt="SIKN" />
+                  <img
+                    src="assets/images/logo-sikn-left.svg"
+                    alt="SIKN"
+                    loading="lazy"
+                  />
                 </div>
                 <span class="footer__quicklink-label">Tentang SIKN</span>
                 <div class="footer__quicklink-arrow">
@@ -986,8 +1056,9 @@
               <a href="#" class="footer__quicklink-card">
                 <div class="footer__quicklink-img">
                   <img
-                    src="assets/images/logo-bahan-ajar.png"
+                    src="assets/images/logo-rgtk.svg"
                     alt="Ruang GTK"
+                    loading="lazy"
                   />
                 </div>
                 <span class="footer__quicklink-label">Ruang GTK</span>
@@ -997,7 +1068,11 @@
               </a>
               <a href="#" class="footer__quicklink-card">
                 <div class="footer__quicklink-img">
-                  <img src="assets/images/logo-buku.png" alt="Buku SIBI" />
+                  <img
+                    src="assets/images/logo-sibi.svg"
+                    alt="Buku SIBI"
+                    loading="lazy"
+                  />
                 </div>
                 <span class="footer__quicklink-label">Buku (SIBI)</span>
                 <div class="footer__quicklink-arrow">
@@ -1040,7 +1115,7 @@
               <span class="footer__contact-title">Lapor</span>
               <a href="#" class="btn btn--primary btn--md">
                 <span>Whistleblowing System</span>
-                <i data-lucide="headphones"></i>
+                <i data-lucide="headset"></i>
               </a>
             </div>
           </div>

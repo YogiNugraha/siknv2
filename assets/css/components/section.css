@@ -11,16 +11,25 @@
 }
 
 /* Background layering*/
-.hero__bg {
+/* .hero__bg {
   position: relative;
-  background-image: linear-gradient(
-      rgba(220, 243, 255, 0.5),
-      rgba(220, 243, 255, 0.5)
-    ),
-    url("../../images/hero-background.jpg");
+  background-image: linear-gradient(#e5ecff, #e5ecff),
+    url("../../images/hero-background3.jpg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  min-height: 720px;
+} */
+.hero__bg {
+  position: relative;
+  background: url("../../images/hero-background3.jpg") center/cover no-repeat,
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--sky-100) 85%, transparent) 30%,
+      color-mix(in srgb, var(--sky-100) 85%, transparent) 100%
+    );
+  background-blend-mode: soft-light;
   min-height: 720px;
 }
 
@@ -174,7 +183,6 @@
   border-color: var(--sky-500);
 }
 
-
 /* 
 ==========================================================================
    KEBIJAKAN SECTION
@@ -218,7 +226,8 @@
   border-radius: var(--radius-xl);
   overflow: hidden;
   text-decoration: none;
-  transition: transform var(--transition-normal), box-shadow var(--transition-normal);
+  transition: transform var(--transition-normal),
+    box-shadow var(--transition-normal);
   width: 1200px;
   height: 252px;
 }
@@ -276,12 +285,13 @@
 }
 
 .about__card {
-  background: linear-gradient(
+  background: url("../../images/about-background3.jpg") center/cover no-repeat,
+    linear-gradient(
       135deg,
       color-mix(in srgb, var(--sky-700) 85%, transparent) 30%,
       color-mix(in srgb, var(--sky-400) 85%, transparent) 100%
-    ),
-    url("../../images/about-background.jpg") center/cover no-repeat;
+    );
+  background-blend-mode: multiply;
   border-radius: var(--radius-xl);
   padding: var(--space-8);
   display: flex;
@@ -330,8 +340,6 @@
   border-radius: var(--radius-lg);
   object-fit: cover;
   aspect-ratio: 1 / 1;
-}
-
 }
 
 /* ── About Video Modal ────────────────────────────────────────────────── */
@@ -830,10 +838,10 @@
 
   .hero__content h1 {
     font-family: var(--bs-font-sans-serif);
-  font-size: 44px;
-  line-height: 56px;
-  font-weight: 500;
-}
+    font-size: 44px;
+    line-height: 56px;
+    font-weight: 500;
+  }
 
   .hero__content {
     flex: auto;

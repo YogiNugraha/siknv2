@@ -456,8 +456,7 @@
 }
 
 .header-search__input:focus {
-  border-color: var(--sky-400);
-  box-shadow: 0 0 0 3px rgba(0, 163, 255, 0.12);
+  border-color: var(--sky-500);
 }
 
 .header-search__icon {
